@@ -1,0 +1,53 @@
+
+
+body{
+    font-style: italic;
+    color: black;
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc);
+}
+
+h1{
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 2.5rem;
+}
+
+ input{
+    display: block;
+    margin: auto;
+    width: 40%;
+    max-width: 280px;
+    height: 3.5vh;
+    border-radius: 0.3rem;
+    outline: none;
+    border: none;
+}
+
+label{
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+button{
+    display: block;
+    margin: auto;
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.6rem;
+    font-weight: 600;
+    font-style: italic;
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc); 
+    color: black;
+    border-color: whitesmoke;
+}
+
+#output{
+    padding-top: 1rem;
+    text-align: center; 
+    font-size: large;
+    font-weight: 600;
+}
+
