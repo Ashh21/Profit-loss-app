@@ -16,12 +16,17 @@ function plhandler(){
 }
 
 function calculateProfitAndLoss(buy, current, qty){
-    if (buy > current){
-       const loss = ((buy - current) * qty).toFixed(2) ;
-       const lossPercentage = ((loss / buy) * 100).toFixed(2) ;
-
-       showOutput(`The loss is ${loss} and loss percent is ${lossPercentage} %`) ;
+    if (buy <= 0 || current <=0 || qty <=0 ){
+       alert("Invalid value. Input value should be positive and non-zero")
     } 
+    else if (buy > current){
+        const loss = ((buy - current) * qty).toFixed(2) ;
+        const lossPercentage = ((loss / buy) * 100).toFixed(2) ;
+ 
+        showOutput(`The loss is ${loss} and loss percent is ${lossPercentage} %`) ;
+     } 
+
+    
     
     else if (current > buy) {
         const profit = ((current - buy) * qty).toFixed(2) ;
@@ -29,10 +34,9 @@ function calculateProfitAndLoss(buy, current, qty){
 
         showOutput(`The proft is ${profit} and profit percent is ${profitPercentage} %`) ;
     }
-    else if (buy = current){
+    else if(buy = current){
        showOutput("No profit and no loss");
     }
-
 
     else{
         alert("Fill all the empty fields first to calculate!!")
