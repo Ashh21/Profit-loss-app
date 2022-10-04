@@ -22,14 +22,18 @@ function calculateProfitAndLoss(buy, current, qty){
 
        showOutput(`The loss is ${loss} and loss percent is ${lossPercentage} %`) ;
     } 
-    else if (current > buy) {
+     if (current > buy) {
         const profit = ((current - buy)* qty).toFixed(2) ;
         const profitPercentage = ((profit/buy)* 100).toFixed(2) ;
 
         showOutput(`The proft is ${profit} and profit percent is ${profitPercentage} %`) ;
 
-    }else {
-        alert("Fill all the empty fields first to calculate!!");
+    }
+    else if (buy = current){
+        showOutput("No profit and no loss");
+    }
+    else{
+        alert("Fill all the empty fields first to calculate!!")
     }
 }
 
